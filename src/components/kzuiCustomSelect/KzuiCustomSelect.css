@@ -1,7 +1,7 @@
 
 .kzui-custom-select {
     position: relative;
-    width: 350px;
+    width: 200px;
     font-family: Arial, sans-serif;
     
   }
@@ -12,10 +12,10 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background: linear-gradient(to right, #8c82b9, #191438);
-    height:80vh;
+    background: linear-gradient(to right, #3b0606, #191438);
+    height:100vh;
     border-radius: 12px;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 20px;
     padding-top: 80px;
@@ -67,7 +67,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: #392e6d;
+    background: #2e1511;
     border: 1px solid #ccc;
     border-radius: 4px;
     z-index: 10;
