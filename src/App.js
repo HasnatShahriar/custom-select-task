@@ -12,37 +12,35 @@ function App() {
   // Original options grouped by country
   const groupedOptions = [
     {
-      label: 'Bangladesh',
+      label: 'Vegetables',
       options: [
-        { label: 'Dhaka' },
-        { label: 'Khulna' },
-        { label: 'Mymensingh' },
-        { label: 'Rajshahi' },
-        { label: 'Chittagong' },
-        { label: 'Sylhet' },
-        { label: 'Barishal' },
-        { label: 'Rangpur' },
+        { label: 'Potato' },
+        { label: 'Onion' },
+        { label: 'Capsicum' },
+        { label: 'Ginger' },
+        { label: 'Turnip' },
+        { label: 'Beetroot' },
       ]
     }
     ,
     {
-      label: 'USA',
+      label: 'Fruits',
       options: [
-        { label: 'New York' },
-        { label: 'Los Angeles' },
-        { label: 'Chicago' },
-        { label: 'Houston' },
-        { label: 'Phoenix' },
+        { label: 'Mango' },
+        { label: 'Pineapple' },
+        { label: 'Grape' },
+        { label: 'Guava' },
+        { label: 'Banana' },
       ]
     },
     {
-      label: 'Canada',
+      label: 'Dairy',
       options: [
-        { label: 'Toronto' },
-        { label: 'Vancouver' },
-        { label: 'Montreal' },
-        { label: 'Calgary' },
-        { label: 'Ottawa' },
+        { label: 'Milk' },
+        { label: 'Butter' },
+        { label: 'Yogurt' },
+        { label: 'Custard' },
+        { label: 'Cheese' },
       ]
     }
 
@@ -71,7 +69,7 @@ function App() {
 
   return (
     <div className='kzui-custom-select_main-container'>
-      <h2>Custom Select Component (City Selector)</h2>
+      <h2>Grocery Selection</h2>
 
       <KzuiCustomSelect
         isClearable={true}
@@ -90,7 +88,7 @@ function App() {
       <button onClick={clearSelection} className='kzui-clear-button'>Clear Selection</button>
 
       <div className='kzui-selected-cities'>
-        <h3>Selected Cities:</h3>
+        <h3>Selected Items:</h3>
         {selectedCities && selectedCities.length > 0 ? (
           <ul>
             {selectedCities.map((city, index) => (
@@ -98,7 +96,7 @@ function App() {
             ))}
           </ul>
         ) : (
-          <p>No cities selected.</p>
+          <p>No item selected.</p>
         )}
       </div>
     </div>

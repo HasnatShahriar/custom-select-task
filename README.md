@@ -1,7 +1,7 @@
 # Custom Select Component and Backend Implementation
 
 ## Project Overview
-This project features a custom select component developed with React and styled using vanilla CSS. The select component includes functionalities such as clearable options, search capability, grouped options, and multi-select support. The backend server dynamically provides options based on search terms.
+This project includes a custom select component built with React and stylized with vanilla CSS. The choose component contains features including clearable options, search functionality, grouped options, and multi-select support. The backend server dynamically displays alternatives based on search terms.
 
 ## Live Site
 Check out the live site [here](https://custom-select-job-task.vercel.app/).
