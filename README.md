@@ -4,7 +4,7 @@
 This project includes a custom select component built with React and stylized with vanilla CSS. The choose component contains features including clearable options, search functionality, grouped options, and multi-select support. The backend server dynamically displays alternatives based on search terms.
 
 ## Live Site
-Check out the live site [here](https://custom-select-job-task.vercel.app/).
+Check out the live site [here](https://grocery-item-selection.netlify.app/).
 
 ## Features
 **Custom Select Component (React):**
@@ -18,7 +18,7 @@ Check out the live site [here](https://custom-select-job-task.vercel.app/).
 │ ├── App.js
 │ ├── components
 │ │ ├── kzuiCustomSelect
-│ │ ├── KzuiCustomSelect.js
+│ │ ├── KzuiCustomSelect.jsx
 │ │ ├── KzuiCustomSelect.css
 ├── README.md
 
