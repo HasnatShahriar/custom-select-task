@@ -1,28 +1,30 @@
+
+
 import { useRef, useState } from "react";
-import './KzuiCustomSelect.css'
+import './KzuiCustomSelect.css';
 
 const KzuiCustomSelect = ({
-    isClearable,
-    isSearchable,
-    isDisabled,
-    options,
-    value,
-    placeholder,
-    isGrouped,
-    isMulti,
-    onChangeHandler,
-    onMenuOpen,
-    onSearchHandler
+  isClearable,
+  isSearchable,
+  isDisabled,
+  options,
+  value,
+  placeholder,
+  isGrouped,
+  isMulti,
+  onChangeHandler,
+  onMenuOpen,
+  onSearchHandler
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const selectRef = useRef(null);
 
-  //select handler
+  // Select handler
   const handleSelect = (option) => {
     if (isMulti) {
-      const newValue = value && Array.isArray(value) && value.includes(option)
-        ? value.filter(val => val !== option)
+      const newValue = value && Array.isArray(value) && value.some(val => val.label === option.label)
+        ? value.filter(val => val.label !== option.label)
         : [...(value || []), option];
       onChangeHandler(newValue);
     } else {
@@ -30,7 +32,6 @@ const KzuiCustomSelect = ({
       setIsOpen(false);
     }
   };
-
 
   const handleClear = () => {
     onChangeHandler(isMulti ? [] : null);
@@ -45,8 +46,7 @@ const KzuiCustomSelect = ({
     }
   };
 
-  
-  // options filter
+  // Options filter
   const filteredOptions = isGrouped
     ? options.map(group => ({
         ...group,
@@ -107,7 +107,7 @@ const KzuiCustomSelect = ({
                     {group.options.map((option, idx) => (
                       <li
                         key={idx}
-                        className={`kzui-custom-select__option ${value && Array.isArray(value) && value.includes(option) ? 'kzui-custom-select__option--selected' : ''}`}
+                        className={`kzui-custom-select__option ${value && Array.isArray(value) && value.some(val => val.label === option.label) ? 'kzui-custom-select__option--selected' : ''}`}
                         onClick={() => handleSelect(option)}
                       >
                         {option.label}
@@ -120,7 +120,7 @@ const KzuiCustomSelect = ({
               filteredOptions.map((option, index) => (
                 <li
                   key={index}
-                  className={`kzui-custom-select__option ${value && Array.isArray(value) && value.includes(option) ? 'kzui-custom-select__option--selected' : ''}`}
+                  className={`kzui-custom-select__option ${value && Array.isArray(value) && value.some(val => val.label === option.label) ? 'kzui-custom-select__option--selected' : ''}`}
                   onClick={() => handleSelect(option)}
                 >
                   {option.label}
@@ -128,7 +128,6 @@ const KzuiCustomSelect = ({
               ))
             )}
           </ul>
-
         </div>
       )}
       

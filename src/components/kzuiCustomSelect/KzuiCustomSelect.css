@@ -1,26 +1,12 @@
 
-.kzui-custom-select {
+
+ .kzui-custom-select {
     position: relative;
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
     font-family: Arial, sans-serif;
-    
   }
   
-  .kzui-custom-select_main-container{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    background: linear-gradient(to right, #3b0606, #191438);
-    height:100vh;
-    border-radius: 12px;
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 20px;
-    padding-top: 80px;
-    
-  }
   .kzui-custom-select__input {
     display: flex;
     align-items: center;
@@ -29,11 +15,11 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
-    width: 100%;
+    background-color: #f7f9fc;
   }
   
   .kzui-custom-select__placeholder {
-    color: #888;
+    color: #000000;
   }
   
   .kzui-custom-select__multi-values {
@@ -44,11 +30,12 @@
   .kzui-custom-select__multi-value {
     background: #191438;
     border: 1px solid #ccc;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 2px 4px;
     margin: 2px;
     display: flex;
     align-items: center;
+    color: rgb(255, 255, 255);
   }
   
   .kzui-custom-select__clear-single {
@@ -71,13 +58,16 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     z-index: 10;
+    max-height: 300px;
+    overflow-y: auto;
   }
   
   .kzui-custom-select__search-input {
     width: 100%;
     padding: 8px;
     border-bottom: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
   }
   
   .kzui-custom-select__list {
@@ -89,8 +79,6 @@
   .kzui-custom-select__option {
     padding: 8px;
     cursor: pointer;
-    height: 18px;
-    
   }
   
   .kzui-custom-select__option--selected {
@@ -109,6 +97,7 @@
     padding: 8px;
     background: #392e6d;
     font-weight: bold;
+    color: white;
   }
   
   .kzui-custom-select__group-list {
@@ -120,6 +109,5 @@
   .kzui-custom-select--disabled {
     pointer-events: none;
     opacity: 0.5;
-  } 
-
-
+  }
+  

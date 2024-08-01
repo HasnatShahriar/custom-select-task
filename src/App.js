@@ -9,7 +9,7 @@ function App() {
   const [selectedCities, setSelectedCities] = useState([]);
   const [filteredOptions, setFilteredOptions] = useState([]);
 
-  // Original options grouped by country
+  // Original options grouped by category
   const groupedOptions = [
     {
       label: 'Vegetables',
@@ -21,8 +21,7 @@ function App() {
         { label: 'Turnip' },
         { label: 'Beetroot' },
       ]
-    }
-    ,
+    },
     {
       label: 'Fruits',
       options: [
@@ -43,7 +42,6 @@ function App() {
         { label: 'Cheese' },
       ]
     }
-
   ];
 
   const handleChange = (selectedOptions) => {
@@ -69,7 +67,7 @@ function App() {
 
   return (
     <div className='kzui-custom-select_main-container'>
-      <h2>Grocery Selection</h2>
+      <h2>Grocery Items Selection</h2>
 
       <KzuiCustomSelect
         isClearable={true}
@@ -77,7 +75,7 @@ function App() {
         isDisabled={false}
         options={filteredOptions.length > 0 ? filteredOptions : groupedOptions}
         value={selectedCities}
-        placeholder="Select Your Cities"
+        placeholder="Select Your Items"
         isGrouped={true}
         isMulti={true}
         onChangeHandler={handleChange}
@@ -85,9 +83,7 @@ function App() {
         onSearchHandler={handleSearch}
       />
 
-      <button onClick={clearSelection} className='kzui-clear-button'>Clear Selection</button>
-
-      <div className='kzui-selected-cities'>
+      <div className='kzui-selected-items'>
         <h3>Selected Items:</h3>
         {selectedCities && selectedCities.length > 0 ? (
           <ul>
@@ -99,6 +95,7 @@ function App() {
           <p>No item selected.</p>
         )}
       </div>
+      <button onClick={clearSelection} className='kzui-clear-button'>Clear Selection</button>
     </div>
   );
 }
