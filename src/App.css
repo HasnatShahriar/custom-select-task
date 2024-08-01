@@ -1,0 +1,53 @@
+App.css
+.kzui-custom-select_main-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.clear-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #e9c9c9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #ff4c4c;
+}
+
+.selected-cities {
+  margin-top: 20px;
+}
+
+.selected-cities h3 {
+  color: #333;
+}
+
+.selected-cities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selected-cities li {
+  background-color: #e2e8f0;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
+}
