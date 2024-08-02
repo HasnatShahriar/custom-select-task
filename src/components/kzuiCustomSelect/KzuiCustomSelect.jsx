@@ -1,6 +1,5 @@
 
 
-
 import { useRef, useState, useEffect } from "react";
 import './KzuiCustomSelect.css';
 
@@ -65,27 +64,46 @@ const KzuiCustomSelect = ({
 
   return (
     <div className={`kzui-custom-select ${isDisabled ? 'kzui-custom-select--disabled' : ''}`} ref={selectRef}>
-      <div className="kzui-custom-select__input" onClick={() => !isDisabled && setIsOpen(!isOpen)}>
+      <div
+        className="kzui-custom-select__input"
+        onClick={() => !isDisabled && setIsOpen(!isOpen)}
+      >
         {isMulti && value && value.length > 0 ? (
           <div className="kzui-custom-select__multi-values">
             {value.map((val, index) => (
               <span key={index} className="kzui-custom-select__multi-value">
                 {val.label}
                 {isClearable && (
-                  <span className="kzui-custom-select__clear-single" onClick={() => handleSelect(val)}>
+                  <span
+                    className="kzui-custom-select__clear-single"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleSelect(val);
+                    }}
+                  >
                     &times;
                   </span>
                 )}
               </span>
             ))}
           </div>
-        ) : value ? (
-          <span className="kzui-custom-select__single-value">{value.label}</span>
+        ) : !isMulti && value ? (
+          <span className="kzui-custom-select__single-value">
+            {value.label}
+          </span>
         ) : (
-          <span style={{ color: '#000040', fontWeight: '800' }}>{placeholder}</span>
+          <span className="kzui-custom-select__placeholder">
+            {placeholder}
+          </span>
         )}
         {isClearable && value && (
-          <span className="kzui-custom-select__clear-all" onClick={handleClear}>
+          <span
+            className="kzui-custom-select__clear-all"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleClear();
+            }}
+          >
             &times;
           </span>
         )}
@@ -100,6 +118,7 @@ const KzuiCustomSelect = ({
               value={searchTerm}
               onChange={handleSearch}
               placeholder="Search..."
+              disabled={isDisabled}
             />
           )}
 

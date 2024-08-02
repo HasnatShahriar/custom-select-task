@@ -1,6 +1,5 @@
 
 
-
 import { useState } from 'react';
 import './App.css';
 import KzuiCustomSelect from './components/kzuiCustomSelect/KzuiCustomSelect';
@@ -9,7 +8,6 @@ function App() {
   const [selectedCities, setSelectedCities] = useState([]);
   const [filteredOptions, setFilteredOptions] = useState([]);
 
-  // Original options grouped by country
   const groupedOptions = [
     {
       label: 'Vegetables',
@@ -21,8 +19,7 @@ function App() {
         { label: 'Turnip' },
         { label: 'Beetroot' },
       ]
-    }
-    ,
+    },
     {
       label: 'Fruits',
       options: [
@@ -43,7 +40,6 @@ function App() {
         { label: 'Cheese' },
       ]
     }
-
   ];
 
   const handleChange = (selectedOptions) => {
@@ -85,8 +81,6 @@ function App() {
         onSearchHandler={handleSearch}
       />
 
-    
-
       <div className='kzui-selected-items'>
         <h3>Selected Items:</h3>
         {selectedCities && selectedCities.length > 0 ? (
@@ -99,9 +93,8 @@ function App() {
           <p>No item selected.</p>
         )}
       </div>
-       <button onClick={clearSelection} className='kzui-clear-button'>Clear Selection</button>
+      <button onClick={clearSelection} className='kzui-clear-button'>Clear Selection</button>
     </div>
-    
   );
 }
 

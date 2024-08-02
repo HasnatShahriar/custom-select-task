@@ -18,10 +18,9 @@
     background-color: #b9ceee;
   }
   
-  .kzui-custom-select__placeholder .kzui-custom-select__placeholder-specific {
-    /* background-color: inherit;  */
-    color: #000000 !important;  
-    font-weight: 800; 
+  .kzui-custom-select__placeholder {
+    color: #000000;  
+
   }
   
   .kzui-custom-select__multi-values {
