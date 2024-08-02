@@ -4,7 +4,7 @@
 This project includes a custom select component built with React and styled with vanilla CSS. The component offers features such as clearable options, search functionality, grouped options, and multi-select support.
 
 ## Live Site
-Check out the live site [https://grocery-item-selection.netlify.app/]
+Check out the live site [here](https://grocery-item-selection.netlify.app/)
 
 ## Features
 **Custom Select Component (React):**
@@ -22,13 +22,12 @@ Check out the live site [https://grocery-item-selection.netlify.app/]
 │ │ │ ├── KzuiCustomSelect.css
 ├── README.md
 
-
 ## Installation
 To get the project up and running locally:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/grocery-item-selection.git
+    git clone https://github.com/HasnatShahriar/custom-select-task.git
     ```
 
 2. **Navigate to the project directory:**
@@ -50,7 +49,7 @@ To get the project up and running locally:
 Once the development server is running, you can view the project in your browser at `http://localhost:3000`.
 
 ## Component Details
-### `KzuiCustomSelect`
+
 This custom select component provides the following props:
 - **`isClearable`** (boolean): Determines if the selected options can be cleared.
 - **`isSearchable`** (boolean): Enables searching within the options.

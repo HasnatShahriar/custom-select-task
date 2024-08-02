@@ -62,15 +62,6 @@ function App() {
       ]
     },
     {
-      label: 'Deli',
-      options: [
-        { label: 'Cheese' },
-        { label: 'Salami' },
-        { label: 'Ham' },
-        { label: 'Turkey' },
-      ]
-    },
-    {
       label: 'Condiments & Spices',
       options: [
         { label: 'Black Pepper' },
@@ -79,7 +70,6 @@ function App() {
         { label: 'Sugar' },
         { label: 'Olive Oil' },
         { label: 'Ketchup' },
-        { label: 'Mayonnaise' },
       ]
     },
     {
@@ -163,19 +153,6 @@ function App() {
         { label: 'Cleaning Alcohol' },
         { label: 'Pain Killers' },
         { label: 'Antacids' },
-      ]
-    },
-    {
-      label: 'Household & Cleaning Supplies',
-      options: [
-        { label: 'Laundry Detergent' },
-        { label: 'Dish Soap' },
-        { label: 'Dishwashing Liquid' },
-        { label: 'Paper Towels' },
-        { label: 'Tissues' },
-        { label: 'Trash Bags' },
-        { label: 'Aluminum Foil' },
-        { label: 'Zip Bags' },
       ]
     },
     {
