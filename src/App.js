@@ -47,7 +47,6 @@ function App() {
       options: [
         { label: 'Chicken' },
         { label: 'Beef' },
-        { label: 'Pork' },
         { label: 'Sausage' },
         { label: 'Bacon' },
       ]
