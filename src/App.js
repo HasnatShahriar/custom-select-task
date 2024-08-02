@@ -1,5 +1,6 @@
 
 
+
 import { useState } from 'react';
 import './App.css';
 import KzuiCustomSelect from './components/kzuiCustomSelect/KzuiCustomSelect';
@@ -38,6 +39,163 @@ function App() {
         { label: 'Yogurt' },
         { label: 'Custard' },
         { label: 'Cheese' },
+      ]
+    },
+
+    {
+      label: 'Meat',
+      options: [
+        { label: 'Chicken' },
+        { label: 'Beef' },
+        { label: 'Pork' },
+        { label: 'Sausage' },
+        { label: 'Bacon' },
+      ]
+    },
+    {
+      label: 'Fish & Seafood',
+      options: [
+        { label: 'Shrimp' },
+        { label: 'Crab' },
+        { label: 'Cod' },
+        { label: 'Tuna' },
+        { label: 'Salmon' },
+      ]
+    },
+    {
+      label: 'Deli',
+      options: [
+        { label: 'Cheese' },
+        { label: 'Salami' },
+        { label: 'Ham' },
+        { label: 'Turkey' },
+      ]
+    },
+    {
+      label: 'Condiments & Spices',
+      options: [
+        { label: 'Black Pepper' },
+        { label: 'Oregano' },
+        { label: 'Cinnamon' },
+        { label: 'Sugar' },
+        { label: 'Olive Oil' },
+        { label: 'Ketchup' },
+        { label: 'Mayonnaise' },
+      ]
+    },
+    {
+      label: 'Snacks',
+      options: [
+        { label: 'Chips' },
+        { label: 'Pretzels' },
+        { label: 'Popcorn' },
+        { label: 'Crackers' },
+        { label: 'Nuts' },
+      ]
+    },
+    {
+      label: 'Bread & Bakery',
+      options: [
+        { label: 'Bread' },
+        { label: 'Tortillas' },
+        { label: 'Pies' },
+        { label: 'Muffins' },
+        { label: 'Bagels' },
+        { label: 'Cookies' },
+      ]
+    },
+    {
+      label: 'Beverages',
+      options: [
+        { label: 'Coffee' },
+        { label: 'Teabags' },
+        { label: 'Milk' },
+        { label: 'Juice' },
+        { label: 'Soda' },
+        { label: 'Beer' },
+        { label: 'Wine' },
+      ]
+    },
+    {
+      label: 'Pasta, Rice & Cereal',
+      options: [
+        { label: 'Oats' },
+        { label: 'Granola' },
+        { label: 'Brown Rice' },
+        { label: 'White Rice' },
+        { label: 'Macaroni' },
+        { label: 'Noodles' },
+      ]
+    },
+    {
+      label: 'Baking',
+      options: [
+        { label: 'Flour' },
+        { label: 'Powdered Sugar' },
+        { label: 'Baking Powder' },
+        { label: 'Cocoa' },
+      ]
+    },
+    {
+      label: 'Frozen Foods',
+      options: [
+        { label: 'Pizza' },
+        { label: 'Fish' },
+        { label: 'Potatoes' },
+        { label: 'Ready Meals' },
+        { label: 'Ice Cream' },
+      ]
+    },
+    {
+      label: 'Personal Care',
+      options: [
+        { label: 'Shampoo' },
+        { label: 'Conditioner' },
+        { label: 'Deodorant' },
+        { label: 'Toothpaste' },
+        { label: 'Dental Floss' },
+      ]
+    },
+    {
+      label: 'Health Care',
+      options: [
+        { label: 'Saline' },
+        { label: 'Band-Aid' },
+        { label: 'Cleaning Alcohol' },
+        { label: 'Pain Killers' },
+        { label: 'Antacids' },
+      ]
+    },
+    {
+      label: 'Household & Cleaning Supplies',
+      options: [
+        { label: 'Laundry Detergent' },
+        { label: 'Dish Soap' },
+        { label: 'Dishwashing Liquid' },
+        { label: 'Paper Towels' },
+        { label: 'Tissues' },
+        { label: 'Trash Bags' },
+        { label: 'Aluminum Foil' },
+        { label: 'Zip Bags' },
+      ]
+    },
+    {
+      label: 'Baby Items',
+      options: [
+        { label: 'Baby Food' },
+        { label: 'Diapers' },
+        { label: 'Wet Wipes' },
+        { label: 'Lotion' },
+      ]
+    },
+    {
+      label: 'Pet Care',
+      options: [
+        { label: 'Pet Food' },
+        { label: 'Kitty Litter' },
+        { label: 'Chew Toys' },
+        { label: 'Pet Treats' },
+        { label: 'Pet Shampoo' },
       ]
     }
   ];

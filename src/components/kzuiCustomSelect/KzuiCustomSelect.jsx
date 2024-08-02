@@ -20,7 +20,7 @@ const KzuiCustomSelect = ({
   const [searchTerm, setSearchTerm] = useState('');
   const selectRef = useRef(null);
 
-  // Debugging: Log the value and placeholder
+
   useEffect(() => {
     console.log('value:', value);
     console.log('placeholder:', placeholder);
@@ -28,8 +28,8 @@ const KzuiCustomSelect = ({
 
   const handleSelect = (option) => {
     if (isMulti) {
-      const newValue = value && Array.isArray(value) && value.includes(option)
-        ? value.filter(val => val !== option)
+      const newValue = value && Array.isArray(value) && value.some(val => val.label === option.label)
+        ? value.filter(val => val.label !== option.label)
         : [...(value || []), option];
       onChangeHandler(newValue);
     } else {
@@ -131,7 +131,7 @@ const KzuiCustomSelect = ({
                     {group.options.map((option, idx) => (
                       <li
                         key={idx}
-                        className={`kzui-custom-select__option ${value && Array.isArray(value) && value.includes(option) ? 'kzui-custom-select__option--selected' : ''}`}
+                        className={`kzui-custom-select__option ${value && Array.isArray(value) && value.some(val => val.label === option.label) ? 'kzui-custom-select__option--selected' : ''}`}
                         onClick={() => handleSelect(option)}
                       >
                         {option.label}
@@ -144,7 +144,7 @@ const KzuiCustomSelect = ({
               filteredOptions.map((option, index) => (
                 <li
                   key={index}
-                  className={`kzui-custom-select__option ${value && Array.isArray(value) && value.includes(option) ? 'kzui-custom-select__option--selected' : ''}`}
+                  className={`kzui-custom-select__option ${value && Array.isArray(value) && value.some(val => val.label === option.label) ? 'kzui-custom-select__option--selected' : ''}`}
                   onClick={() => handleSelect(option)}
                 >
                   {option.label}

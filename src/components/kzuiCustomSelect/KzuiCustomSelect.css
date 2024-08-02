@@ -14,12 +14,11 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     cursor: pointer;
-    /* background-color: #f7f9fc; */
     background-color: #b9ceee;
   }
   
   .kzui-custom-select__placeholder {
-    color: #000000;  
+    color: #000000 !important;  
 
   }
   
@@ -58,7 +57,7 @@
     background: #2e1511;
     border: 1px solid #ccc;
     border-radius: 4px;
-    /* z-index: 10; */
+    z-index: 10;
     max-height: 300px;
     overflow-y: auto;
   }
