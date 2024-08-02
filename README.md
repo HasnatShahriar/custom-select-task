@@ -32,7 +32,7 @@ To get the project up and running locally:
 
 2. **Navigate to the project directory:**
     ```bash
-    cd grocery-item-selection
+    cd custom-select-task
     ```
 
 3. **Install dependencies:**
